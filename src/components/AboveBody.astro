@@ -1,0 +1,87 @@
+---
+import NavBar from '../components/NavBar.astro'
+import bg2560 from '../assets/bg2560-2.png'
+---
+
+<div class="above_body" style={{ background: `url(${bg2560.src}) repeat-x`}}>
+  <div id="header" class="floatcontainer doc_header">
+    <div id="toplinks" class="toplinks">
+      <ul class="nouser gap-x-3">
+        <li><a href="#" rel="nofollow">Register</a></li>
+        <li><a rel="help" href="#">Help</a></li>
+        <li>
+          <form id="navbar_loginform" @click.prevent="">
+            <fieldset id="logindetails" class="logindetails">
+              <input type="text" class="textbox" name="username" id="navbar_username" size="10" accesskey="u" tabindex="101" placeholder="User Name" />
+              <input type="password" class="textbox" tabindex="102" name="password" id="navbar_password" size="10" style="display: none;" />
+              <input type="text" class="textbox" tabindex="102" name="password_hint" id="navbar_password_hint" size="10" placeholder="Password" style="display: inline;" />
+              <input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+            </fieldset>
+            <div id="remember" class="remember">
+              <input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" />
+              <label for="cb_cookieuser_navbar">
+                Remember Me?
+              </label>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <NavBar />
+  </div>
+</div>
+<style lang="scss">
+.above_body {
+	padding: 0;
+  margin: 0 2em .5em 2em;
+	border-radius: 0 0 .2em .2em;
+
+  #header {
+    min-height: 150px;
+  }
+
+  .toplinks {
+    color: rgb(102, 102, 102);
+    text-align: right;
+    background: none;
+
+    .logindetails {
+      padding: 0 10px;
+      text-align: center;
+      background: rgb(255, 255, 255);
+      border-radius: 0 0 .25em .25em;
+      height: 1.8em;
+    }
+
+    ul.nouser {
+      margin: 0 2em;
+      list-style: none;
+      display: inline-flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      li {
+        display: inline;
+        list-style: none;
+
+        a {
+          display: block;
+          padding: .5em .7em;
+          background: rgb(255, 255, 255);
+          border-radius: 0 0 .4em .4em;
+          font-weight: bold;
+          font-size: .75rem;
+        }
+      }
+    }
+    form {
+      text-align: left;
+
+      input, label {
+        font-size: .7rem;
+        border: none;
+      }
+    }
+  }
+}
+</style>

@@ -1,0 +1,77 @@
+---
+
+---
+
+<div id="navbar" class="navbar">
+  <ul id="navtabs" class="flex">
+    <li><a class="navtab" href="showthread.php?2">Donate</a></li>
+    <li class="selected" >
+      <a class="navtab" href="index.php">Home</a>
+    </li>
+    <li>
+      <a class="navtab" href="forumdisplay.php?74">Download Center</a>
+    </li>
+    <li>
+      <a class="navtab" href="forum.php?s=18640bb71c40081138a4e4a4fc8c308f">Forum</a>
+    </li>
+    <li>
+      <a class="navtab" href="search.php?s=18640bb71c40081138a4e4a4fc8c308f&do=getdaily&contenttype=vBForum_Post" accesskey="2">What's New?</a>
+    </li>
+
+    <li><a class="navtab" href="showthread.php?145">Rules</a></li>
+    <li>
+      <a class="navtab" href="showthread.php?1380">Host your fansub</a>
+    </li>
+  </ul>
+
+  <div id="globalsearch" class="globalsearch">
+    <form
+      action="search.php?s=18640bb71c40081138a4e4a4fc8c308f&do=process"
+      method="post"
+      id="navbar_search"
+      class="navbar_search"
+    >
+      <input
+        type="hidden"
+        name="securitytoken"
+        value="guest"
+        wfd-invisible="true"
+      />
+      <input type="hidden" name="do" value="process" wfd-invisible="true" />
+      <span class="textboxcontainer"
+        ><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span
+        ></span
+      >
+      <span class="buttoncontainer"
+        ><span><input type="image" class="searchbutton" src="/web/20160305055514im_/http://forum.tirkx.com/main/images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span
+        ></span
+      >
+    </form>
+    <ul class="navbar_advanced_search">
+      <li>
+        <a href="search.php?s=18640bb71c40081138a4e4a4fc8c308f" accesskey="4">Advanced Search</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<style lang="scss">
+  ul#navtabs {
+    > li {
+      border-left: 1px solid #5a7f97;
+      border-right: 1px solid #5a7f97;
+      background-color: #819eb2;
+      > a {
+        padding: .35em 1em;
+        border-top: 1px solid #Cedfeb;
+        border-left: 1px solid #Cedfeb;
+        display: block;
+        min-width: 60px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: .8rem;
+      }
+    }
+  }
+</style>
